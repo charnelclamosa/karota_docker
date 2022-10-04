@@ -117,5 +117,5 @@ COPY sbin/ /sbin
 # Discourse specific bits
 RUN useradd discourse -s /bin/bash -m -U &&\
     install -dm 0755 -o discourse -g discourse /var/www/discourse &&\
-    sudo -u discourse git clone --depth 1 https://github.com/discourse/discourse.git /var/www/discourse &&\
+    sudo -u discourse git clone --depth 1 https://github.com/charnelclamosa/karota_webapp.git /var/www/discourse &&\
     sudo -u discourse git -C /var/www/discourse remote set-branches --add origin tests-passed
