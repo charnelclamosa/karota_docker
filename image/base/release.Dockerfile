@@ -1,5 +1,5 @@
-ARG from=discourse/base
-ARG tag=build_slim
+ARG from=gcr.io/karota-uat/karota_base
+ARG tag=latest
 
 FROM $from:$tag
 
