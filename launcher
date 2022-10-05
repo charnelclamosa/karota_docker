@@ -91,7 +91,8 @@ git_rec_version='1.8.0'
 config_file=containers/"$config".yml
 cidbootstrap=cids/"$config"_bootstrap.cid
 local_discourse=local_discourse
-image="discourse/base:2.0.20220818-0047"
+image="gcr.io/karota-uat/karota_base:latest"
+# original value image="discourse/base:2.0.20220818-0047"
 docker_path=`which docker.io 2> /dev/null || which docker`
 git_path=`which git`
 
@@ -206,7 +207,8 @@ check_prereqs() {
       ;;
     aarch64 | arm64)
       echo "WARNING: Support for aarch64 is experimental at the moment. Please report any problems at https://meta.discourse.org/tag/arm "
-      image="discourse/base:aarch64"
+      image="gcr.io/karota-uat/karota_base:latest"
+      # Original value: image="discourse/base:aarch64"
       arm=true
       read -n 1 -s -r -p "Press any key to continue"
       ;;
