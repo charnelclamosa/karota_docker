@@ -1,4 +1,4 @@
-ARG from=gcr.io/karota-uat/karota_base
+ARG from=gcr.io/karota-uat/karota_base_slim
 ARG tag=latest
 
 FROM $from:$tag
