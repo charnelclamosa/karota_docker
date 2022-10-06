@@ -17,8 +17,7 @@ env:
 
 
 params:
-  #version: tests-passed
-  version: main
+  version: tests-passed
 
   home: /var/www/discourse
   upload_size: 10m
