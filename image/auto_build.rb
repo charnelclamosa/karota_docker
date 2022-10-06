@@ -1,5 +1,5 @@
 # simple build file to be used locally by Sam
-#
+# NOTE: Charnel: run `sudo -s` first before building image for 'base'
 require 'pty'
 require 'optparse'
 
