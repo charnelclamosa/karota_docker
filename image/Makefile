@@ -20,13 +20,13 @@ build-base:
 tag:
 	@echo $(LATEST_TAG)
 
-deploy-slim:
+upload-slim:
 	docker tag $(DISCOURSE_IMAGE):$(TAG_SLIM) $(G_REPO)/$(IMAGE_SLIM):$(LATEST_TAG)
 	docker tag $(DISCOURSE_IMAGE):$(TAG_SLIM) $(G_REPO)/$(IMAGE_SLIM):latest
 	docker push $(G_REPO)/$(IMAGE_SLIM):$(LATEST_TAG)
 	docker push $(G_REPO)/$(IMAGE_SLIM):latest
 
-deploy-base:
+upload-base:
 	docker tag $(DISCOURSE_IMAGE):$(TAG_BASE) $(G_REPO)/$(IMAGE_BASE):$(LATEST_TAG)
 	docker tag $(DISCOURSE_IMAGE):$(TAG_BASE) $(G_REPO)/$(IMAGE_BASE):latest
 	docker push $(G_REPO)/$(IMAGE_BASE):$(LATEST_TAG)
