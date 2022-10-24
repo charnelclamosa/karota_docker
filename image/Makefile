@@ -17,9 +17,6 @@ build-slim:
 build-base:
 	sudo ruby auto_build.rb base
 
-tag:
-	@echo $(LATEST_TAG)
-
 upload-slim:
 	docker tag $(DISCOURSE_IMAGE):$(TAG_SLIM) $(G_REPO)/$(IMAGE_SLIM):$(LATEST_TAG)
 	docker tag $(DISCOURSE_IMAGE):$(TAG_SLIM) $(G_REPO)/$(IMAGE_SLIM):latest
