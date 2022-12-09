@@ -28,3 +28,5 @@ upload-base:
 	docker tag $(DISCOURSE_IMAGE):$(TAG_BASE) $(G_REPO)/$(IMAGE_BASE):latest
 	docker push $(G_REPO)/$(IMAGE_BASE):$(LATEST_TAG)
 	docker push $(G_REPO)/$(IMAGE_BASE):latest
+
+deploy: build-slim upload-slim build-base upload-base
